@@ -14,5 +14,29 @@
 # print(squares)
 
 # list of squares using list comprehension
-squares=[value**2 for value in range(1,11)]
-print(squares)
+# squares=[value**2 for value in range(1,11)]
+# print(squares)
+
+# exercises
+# for value in range(1, 21):
+#     print(value)
+
+# nums=[value for value in range(1, 1000001)]
+# print(nums)
+# print(min(nums))
+# print(max(nums))
+# print(sum(nums))
+
+# odd_nums=[num for num in range(1,21)]
+# for num in odd_nums:
+#     if num%2 != 0:
+#         print(num)
+
+# odd_nums=[num for num in range(1,21,2)]
+# print(odd_nums)
+
+# threes=[num for num in range(3,31,3)]
+# print(threes)
+
+cubes=[num**3 for num in range(1,11)]
+print(cubes)
