@@ -1,6 +1,7 @@
 # import libraries
 from bs4 import BeautifulSoup
 import requests
+import csv
 
 url="https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)"
 
@@ -28,20 +29,3 @@ for th in gdp_table_data[0].find_all("th"):
 
 print(headings)
 
-
-# data = {}
-# for table, heading in zip(gdp_table_data[1].find_all("table"), headings):
-#     t_headers = []
-#     for th in table.find_all("th"):
-#         t_headers.append(th.text.replace('\n', ' ').strip())
-    
-#     table_data = []
-#     for tr in table.tbody.find_all("tr"):
-#         t_row = {}
-#         for td, th in zip(tr.find_all("td"), t_headers):
-#             t_row[th] = td.text.replace('\n', '').strip()
-#         table_data.append(t_row)
-    
-#     data[heading] = table_data
-
-# print(data)
