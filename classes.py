@@ -30,6 +30,7 @@ class Restaurant:
         """initialize attributes"""
         self.name = restaurant_name
         self.type = cuisine_type
+        self.number_served = 0
 
     def describe(self):
         """print info about restaurant"""
@@ -39,15 +40,34 @@ class Restaurant:
         """prints restaurant is open"""
         print(f"{self.name} is open!")
 
-cafe1 = Restaurant('Apples and Barley', 'American')
-cafe2 = Restaurant('Crunchy Cafe', 'Healthy')
+    def set_number_served(self, num):
+        self.number_served += num
 
-print(f"The first cafe's name is {cafe1.name}.")
-print(f"{cafe1.name} serves {cafe1.type} food.\n")
+    def increment_number_served(self, incrm):
+        self.number_served += incrm
 
-cafe1.describe()
-cafe1.open()
-cafe2.describe()
-cafe2.open()
+restaurant = Restaurant('Test Cafe', 'Italian')
+print(f"{restaurant.name} serves {restaurant.type} food and has served {restaurant.number_served} people.")
+
+restaurant.set_number_served(100)
+
+print(f"\n{restaurant.name} has now served {restaurant.number_served} people.")
+
+restaurant.increment_number_served(5)
+print(restaurant.number_served)
+restaurant.increment_number_served(5)
+print(restaurant.number_served)
+
+# cafe1 = Restaurant('Apples and Barley', 'American')
+# cafe2 = Restaurant('Crunchy Cafe', 'Healthy')
+
+# print(f"The first cafe's name is {cafe1.name}.")
+# print(f"{cafe1.name} serves {cafe1.type} food.\n")
+
+# cafe1.describe()
+# cafe1.open()
+# cafe2.describe()
+# cafe2.open()
+
 
 
