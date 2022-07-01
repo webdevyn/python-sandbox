@@ -41,7 +41,7 @@ class Restaurant:
         print(f"{self.name} is open!")
 
     def set_number_served(self, num):
-        self.number_served += num
+        self.number_served = num
 
     def increment_number_served(self, incrm):
         self.number_served += incrm
