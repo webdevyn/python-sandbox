@@ -42,6 +42,10 @@ class Battery:
             range = 315
         
         print(f"This car can go {range} miles on a full charge.")
+    
+    def upgrade_battery(self):
+        if self.battery_size != 100:
+            self.battery_size = 100
 
 class ElectricCar(Car):
     """Represent aspects of electric car"""
@@ -63,3 +67,44 @@ my_500e.increment_odometer(5000)
 print(f"New mileage is: {my_500e.odometer_reading}")
 my_500e.battery.describe_battery()
 my_500e.battery.get_range()
+my_500e.battery.upgrade_battery()
+my_500e.battery.describe_battery()
+my_500e.battery.get_range()
+my_500e.fill_gas_tank()
+
+class Restaurant:
+    """a simple model of a restaurant"""
+    def __init__(self,restaurant_name,cuisine_type):
+        """initialize attributes"""
+        self.name = restaurant_name
+        self.type = cuisine_type
+        self.number_served = 0
+
+    def describe(self):
+        """print info about restaurant"""
+        print(f"{self.name} serves {self.type} food.")
+
+    def open(self):
+        """prints restaurant is open"""
+        print(f"{self.name} is open!")
+
+    def set_number_served(self, num):
+        self.number_served = num
+
+    def increment_number_served(self, incrm):
+        self.number_served += incrm
+
+
+class IceCreamStand(Restaurant):
+    def __init__(self,restaurant_name,cuisine_type,flavors=["vanilla","chocolate","caramel"]):
+        """Initialize attributes of the parent class"""
+        super().__init__(restaurant_name,cuisine_type)
+        self.flavors = flavors
+
+    def display_flavors(self):
+        print(f"{self.flavors} are the flavors we have.")
+
+
+my_Stand = IceCreamStand('Coldies','Nondairy')
+print(f"{my_Stand.name} serves {my_Stand.type} frozen treats.")
+my_Stand.display_flavors()
