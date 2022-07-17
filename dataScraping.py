@@ -1,3 +1,5 @@
+#this is part of a tutorial from https://www.pluralsight.com/guides/extracting-data-html-beautifulsoup
+
 # import libraries
 from bs4 import BeautifulSoup
 import requests
